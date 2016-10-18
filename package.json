@@ -1,0 +1,27 @@
+{
+  "name": "zetta-industrial-monitor-modbus-mock-driver",
+  "version": "0.0.1",
+  "description": "Mock Zetta device that generates a sine wave.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zetta",
+    "temperature",
+    "industrial-monitor-modbus"
+  ],
+  "author": "Brian Mulloy <brian@landlessness.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zettajs/zetta-industrial-monitor-modbus-mock-driver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zettajs/zetta-industrial-monitor-modbus-mock-driver/issues"
+  },
+  "homepage": "https://github.com/zettajs/zetta-industrial-monitor-modbus-mock-driver",
+  "dependencies": {
+    "zetta-device": "^0.19.0"
+  }
+}
