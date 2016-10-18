@@ -2,6 +2,9 @@ var Device = require('zetta-device');
 var util = require('util');
 var extend = require('node.extend');
 
+// HOWTO: connect to live modbus?
+// use this node module: https://github.com/Cloud-Automation/node-modbus
+
 var OPTOEMU_SNR_DR1_IMG = 'http://www.opto22.com/images/products/OPTOEMU-SNR-DR1_p_450.png';
 
 function degToRad(x) {
