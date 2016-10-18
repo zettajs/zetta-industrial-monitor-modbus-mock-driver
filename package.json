@@ -1,6 +1,6 @@
 {
   "name": "zetta-industrial-monitor-modbus-mock-driver",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mock Zetta device that generates a sine wave.",
   "main": "index.js",
   "scripts": {

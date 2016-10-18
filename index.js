@@ -1,5 +1,8 @@
 var Device = require('zetta-device');
 var util = require('util');
+var extend = require('node.extend');
+
+var OPTOEMU_SNR_DR1_IMG = 'http://www.opto22.com/images/products/OPTOEMU-SNR-DR1_p_450.png';
 
 function degToRad(x) {
   return x * ( Math.PI / 180 );
@@ -7,6 +10,8 @@ function degToRad(x) {
 
 // mock device based on OPTOEMU SENSOR COMMUNICATION GUIDE
 // OptoEMU Sensor(TM) Energy Monitoring Units
+// http://www.opto22.com/site/pr_details.aspx?cid=8&item=OPTOEMU-SNR-DR1
+
 var IndustrialMonitor = module.exports = function(opts) {
   Device.call(this);
   
@@ -25,6 +30,19 @@ var IndustrialMonitor = module.exports = function(opts) {
   this._counter = 0;
   this._lastReadStatus = 0;
   this._lastGoodPowerReading = 0;
+  
+  this.style = extend(true, this.style, {properties: {
+    stateImage: {
+      url: OPTOEMU_SNR_DR1_IMG,
+      tintMode: 'original'
+    },
+    power: {
+      display: 'billboard',
+      significantDigits: 2,
+      symbol: 'kW'
+    }
+  }});
+  
 };
 util.inherits(IndustrialMonitor, Device);
 
